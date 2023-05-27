@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span id="txt">打倒阶级异己分子张登瑞！</span>
+
+<script type="text/javascript">
+    function show(){
+        var tag = document.getElementById('txt');
+        var data = tag.innerText;
+
+        var firstChar = data[0];
+        var otherString = data.substring(1, data.length)
+        data = otherString + firstChar
+
+        tag.innerText = data
+    }
+    setInterval(show, 100) //定时器，每一秒执行一次show()函数
+</script>
+</body>
+</html>

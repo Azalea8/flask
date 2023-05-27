@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<ul id="city">
+
+</ul>
+<script type="text/javascript">
+    let cityList = ['北京', '上海', '深圳'];
+
+    for(let idx in cityList){
+        let text = cityList[idx]
+        let tag = document.createElement('li')
+        tag.innerText = text
+
+        let parentTag = document.getElementById('city');
+        parentTag.appendChild(tag)
+    }
+
+</script>
+</body>
+</html>

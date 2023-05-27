@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+</head>
+<body>
+    <input type="text" placeholder="输入点东西吧~"  id="txt"/>
+    <input type="button" value="点击添加" onclick="add()"/>
+    <ul id="city">
+
+    </ul>
+    <script type="text/javascript">
+    function add(){
+        let txtTag = document.getElementById('txt')
+        let li = document.createElement('li');
+        if(txtTag.value.length > 0){
+            li.innerText = txtTag.value;
+            document.getElementById('city').appendChild(li);
+
+            txtTag.value = '';
+        }else{
+            alert('输入不能为空');
+        }
+    }
+    </script>
+</body>
+</html>

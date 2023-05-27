@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+    </thead>
+    <tbody id="body">
+
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    let datalist = [
+        {id:1, name:'李昕', age: 16},
+        {id:2, name:'李昕', age: 16},
+        {id:3, name:'李昕', age: 16},
+        {id:4, name:'李昕', age: 16},
+        {id:5, name:'李昕', age: 16},
+    ]
+
+    for(let idx in datalist){
+        let info = datalist[idx];
+        let tr = document.createElement('tr');
+        for(let key in info){
+            let text = info[key]
+            let td = document.createElement('td');
+            td.innerText = text;
+            tr.appendChild(td)
+        }
+        document.getElementById('body').appendChild(tr)
+    }
+
+</script>
+</body>
+</html>
