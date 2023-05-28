@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Azalea</td>
+            <td>
+                <input type="button" value="删 除" class="del">
+            <td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Azalea</td>
+            <td>
+                <input type="button" value="删 除" class="del">
+            <td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Azalea</td>
+            <td>
+                <input type="button" value="删 除" class="del">
+            <td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Azalea</td>
+            <td>
+                <input type="button" value="删 除" class="del">
+            <td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="/static/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    $(function (){
+        $('.del').click(function (){
+        $(this).parent().parent().remove()
+    })
+})
+</script>
+
+</body>
+</html>

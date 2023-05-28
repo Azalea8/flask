@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>奶毒</li>
+    <li>腾讯</li>
+    <li>阿里</li>
+    <li>字节</li>
+</ul>
+<script src="/static/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+
+    $(function (){
+        $('li').click(function () {
+        let text = $(this).text();
+        console.log(text);
+        $(this).remove();
+    });
+})
+
+</script>
+</body>
+</html>

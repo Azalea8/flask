@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menus {
+            height: 800px;
+            width: 200px;
+            border: 1px solid red;
+        }
+
+        .menus .header {
+            background-color: gold;
+            padding: 10px 5px;
+
+            cursor: pointer;
+        }
+
+        .menus .content a {
+            display: block;
+            border-bottom: 1px dotted #dddddd;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menus">
+    <div class="item">
+        <div class="header" onclick="clickme(this)">上海</div>
+        <div class="content">
+            <a>宝山区</a>
+            <a>浦东新区</a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickme(this)">北京</div>
+        <div class="content hide">
+            <a>海淀区</a>
+            <a>朝阳区</a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickme(this)">上海2</div>
+        <div class="content hide">
+            <a>宝山区</a>
+            <a>浦东新区</a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickme(this)">北京2</div>
+        <div class="content hide">
+            <a>海淀区</a>
+            <a>朝阳区</a>
+        </div>
+    </div>
+</div>
+
+<script src="/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    function clickme(self) {
+        let hasHide = $(self).next().hasClass('hide');
+
+        if (hasHide) {
+            $(self).next().removeClass('hide');
+            $(self).parent().siblings().find('.content').addClass('hide')
+        } else {
+            $(self).next().addClass('hide');
+        }
+
+    }
+</script>
+</body>
+</html>

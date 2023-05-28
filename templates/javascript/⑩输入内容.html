@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtUser" placeholder="输入用户名"/>
+<input type="text" id="txtEmail" placeholder="输入邮箱"/>
+<input type="button" value="提 交" onclick="getInfo()"/>
+<ul id="view">
+
+</ul>
+<script src="/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    function getInfo(){
+        let username = $('#txtUser').val();
+        let email = $('#txtEmail').val();
+        let li = $("<li>").text(username);
+        $('#view').append(li);
+    }
+</script>
+</body>
+</html>
